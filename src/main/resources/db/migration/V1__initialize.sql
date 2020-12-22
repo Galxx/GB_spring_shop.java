@@ -31,6 +31,14 @@ create table users (
   PRIMARY KEY (id)
 );
 
+drop table if exists news;
+create table news (
+  id                 bigserial,
+  header             VARCHAR(30) not null,
+  title              VARCHAR(80) not null,
+  PRIMARY KEY (id)
+);
+
 drop table if exists roles;
 create table roles (
   id                    serial,
@@ -48,6 +56,14 @@ create table users_roles (
   FOREIGN KEY (role_id)
   REFERENCES roles (id)
 );
+
+insert into news (header, title)
+values
+('Внимание акция!!!','Скидка на все товары 30%');
+
+insert into news (header, title)
+values
+('Новое поступление сыров!!!','Встречайте! Сыр Российский только в нашем магазине!');
 
 insert into roles (name)
 values

@@ -11,11 +11,6 @@ public class Application {
     }
 }
 
-// TODO:
-// 1. Покрыть 30%-50% кода автотестами
 
-
-//TODO: для себя
-//1. почему падает npe на User user = userService.findByUsername(((CustomPrincipal)authentication.getPrincipal()).getUsername()); saveOrder
 
 
